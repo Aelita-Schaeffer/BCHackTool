@@ -1,0 +1,4 @@
+msgid	"Main Greeting" 
+msgstr	"Hoş geldin, Bu gün ne yapmak istersin?"
+msgid	"Missing File Error"
+msgstr	"Dosya bulunamadı!"
