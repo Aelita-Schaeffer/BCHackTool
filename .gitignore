@@ -1,1 +1,2 @@
-Gemfile.lock
+src/shell/__pycache__/
+locale/*/LC_MESSAGES/*.mo

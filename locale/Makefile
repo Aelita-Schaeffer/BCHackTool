@@ -1,5 +1,5 @@
 PREFIX := ./
-PO_FILES := $(wildcard $(PO_DIR)*.po)
+PO_FILES := $(wildcard $(PO_DIR)*/LC_MESSAGES/lang.po)
 
 all: $(patsubst %.po, %.mo, $(PO_FILES))
 
