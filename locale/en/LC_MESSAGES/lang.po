@@ -2,4 +2,4 @@ msgid	"Main Greeting"
 msgstr	"Welcome, what do you want to do today?" 
 
 msgid	"Missing File Error" 
-msgstr	"File Not Found"
+msgstr	"File Not Found, hola"
