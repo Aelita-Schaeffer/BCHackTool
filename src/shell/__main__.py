@@ -3,13 +3,7 @@
 
 import os
 import cmd
-import locale
 import gettext
-
-locale.setlocale(locale.LC_ALL, 'tr_TR.utf8')
-
-print(locale.getdefaultlocale())
-print(f"{os.getcwd()}/locale")
 
 localedir = "locale"
 translation = gettext.translation("lang", localedir, languages=["tr"])
@@ -17,12 +11,14 @@ translation.install()
 _ = translation.gettext
 
 class Shell(cmd.Cmd):
-    intro = "Basit Komut Satırı Kabuğu. 'help' yazarak mevcut komutları görüntüleyebilirsiniz."
+    intro = _("Intro")
+    intro = f"{intro}"
     prompt = "> "
 
-    def do_hello(self, arg):
+    def do_list(self, arg):
         """Hello world"""
         print(_("Main Greeting"))
+        print(f"{arg}")
 
     def do_pwd(self, arg):
         """bash -c pwd"""
@@ -32,6 +28,6 @@ class Shell(cmd.Cmd):
         """exit komutu: Kabuktan çık."""
         return True
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     shell = Shell()
     shell.cmdloop()

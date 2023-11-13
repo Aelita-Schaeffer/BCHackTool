@@ -1,3 +1,10 @@
+msgid   ""
+msgstr  "Content-Type: text/plain; charset=UTF-8\n"
+	    "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "Intro"
+msgstr  "Welcome to the regenerated bchacktool's simple shell, you can type \"help\" get information about commands."
+
 msgid	"Main Greeting" 
 msgstr	"Welcome, what do you want to do today?" 
 

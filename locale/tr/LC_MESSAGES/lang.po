@@ -2,6 +2,9 @@ msgid   ""
 msgstr  "Content-Type: text/plain; charset=UTF-8\n"
 	    "Content-Transfer-Encoding: 8bit\n"
 
+msgid   "Intro"
+msgstr  "Yenilenmiş bchacktool'un basit kabuğuna hoş geldin, \"help\" yazarak komutlar hakkında bilgi edinebilirsin."
+
 msgid   "Main Greeting"
 msgstr  "Hoş geldin, Bu gün ne yapmak istersin?"
 
