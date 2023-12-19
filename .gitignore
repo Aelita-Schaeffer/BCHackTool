@@ -1,2 +1,3 @@
 src/shell/__pycache__/
 locale/*/LC_MESSAGES/*.mo
+tools

@@ -1,13 +1,22 @@
-SUBDIRS := locale
+PREFIX := /usr
+BCHDIR := $(PREFIX)/share/bchacktool
+BINDIR := $(PREFIX)/bin
 
-all: locale install
+LOCALE := locale
+SDB := tools/sdb
 
-locale: $(SUBDIRS)
+all: sdb locale
 
-$(SUBDIRS):
-	$(MAKE) -C $@
+sdb:
+	$(MAKE) -C $(SDB)
 
-install:
-	pip3 install -r "requirements.txt"
+locale:
+	ln -vf $(SDB)/src/sdb $(LOCALE)
+	$(MAKE) -C $(LOCALE)
 
-.PHONY: locale
+clean:
+	$(MAKE) -C $(SDB) clean
+	$(MAKE) -C $(LOCALE) clean
+	
+
+.PHONY: sdb locale clean

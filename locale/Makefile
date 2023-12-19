@@ -1,10 +1,12 @@
 PREFIX := ./
-PO_FILES := $(wildcard $(PO_DIR)*/LC_MESSAGES/lang.po)
+LOCALEDIR := $(wildcard */*.sh)
 
-all: $(patsubst %.po, %.mo, $(PO_FILES))
+all: build
 
-%.mo: %.po
-	msgfmt $< -o $@
+build:
+	$(foreach file,$(LOCALEDIR), ./build.sh $(file);)
 
 clean:
-	rm -f $(patsubst %.po, %.mo, $(PO_FILES))
+	rm -f $(wildcard */*.lang)
+
+.PHONY: all build clean
